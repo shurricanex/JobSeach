@@ -15,3 +15,4 @@
 //     return view('welcome');
 // });
 Route::get('/', 'FrontController@index');
+Route::get('/root','FrontController@view');
