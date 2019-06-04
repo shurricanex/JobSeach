@@ -15,4 +15,7 @@
 //     return view('welcome');
 // });
 Route::get('/', 'FrontController@index');
-Route::get('/root','FrontController@view');
+
+Route::get('/home', 'FrontController@showhome');
+Route::get('/joblist', 'FrontController@showJoblist');
+Route::get('/category', 'FrontController@showCategory');
