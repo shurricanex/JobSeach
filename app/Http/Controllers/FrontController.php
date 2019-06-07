@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Company;
 use DB;
 class FrontController extends Controller
 {
@@ -15,13 +16,13 @@ class FrontController extends Controller
      return view('page.home');
     }
     public function showJoblist (){
-        $data=DB::table('posts')
-        ->join('conpany');
-        echo "<pre>";
-        print_r($data);
+        // $data=DB::table('posts')->get();
 
-        // $post= Post::all();
-        // return view('page.JobList')->with('posts',$post);
+        // echo "<pre>";
+        // print_r($data);
+
+            $post= Post::all();
+            return view('page.JobList')->with('posts',$post);
        // return view('page.joblist');
     }
     public function showCategory (){

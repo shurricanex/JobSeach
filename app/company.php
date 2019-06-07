@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class company extends Model
 {
-    protected $tablename='Post';
+    protected $tablename='Company'; 
 
-    public $primaryKey='PID';
+    public $primaryKey='CID';
 
     public $timestamps=true;
-
 }
