@@ -19,3 +19,5 @@ Route::get('/', 'FrontController@index');
 Route::get('/home', 'FrontController@showhome');
 Route::get('/joblist', 'FrontController@showJoblist');
 Route::get('/category', 'FrontController@showCategory');
+
+Route::resource('posts', 'PostController');

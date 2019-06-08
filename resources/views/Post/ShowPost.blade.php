@@ -10,23 +10,13 @@
 				</div>
 				<div class=" col-sm-2  col-12 mt-4 mb-0">
 					<!-- <a href="#" class="btn btn-success float-left" type="submit">Search</a> -->
-                    <button class=" btn btn-success  iphone_input " type="submit">Search</button> <br><br>
-
-                    <h1 class=" btn btn-success"> <a href="/posts/create"> Create </a></h1>
+					<button class=" btn btn-success  iphone_input " type="submit">Search</button>
                 </div>
             </div>
-            @if(count($posts)>0)
-            @foreach ($posts as $post)
-                <div class="well">
-                <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
-                <p>write on {{$post->created_at}}</p>
-                </div>
-           @endforeach
-      @else
-        <p> No post found</p>
-      @endif
+            <h2> {{$showPost->position}}</h2>
+            <small>{{$showPost->description_job}}</small>
+            <p>Written on  {{$showPost->created_at}}</p>
 
 		</div>
-
     </div>
 @endsection
