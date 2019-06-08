@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.createPost');
     }
 
     /**
@@ -48,7 +48,7 @@ class PostController extends Controller
     public function show($PID)
     {
         $showPost=Post::find($PID);
-        return view('page.ShowPost')->with('showPost', $showPost);
+        return view('Post.ShowPost')->with('showPost', $showPost);
     }
 
     /**
