@@ -3,7 +3,7 @@
 @section('content')
     <div style="margin-top: 100px" class="container">
         <div class="container">
-                {!! Form::open() !!}
+            <Form>
                     <fieldset>
                       <legend>Personal information:</legend>
                       First name:<br>
@@ -12,7 +12,7 @@
                       <input type="text" name="lastname" value="Mouse"><br><br>
                       <input type="submit" value="Submit">
                     </fieldset>
-                  {!! Form::close() !!}
+            </Form>
             </div>
     </div>
 @endsection
