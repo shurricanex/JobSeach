@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Post;
 use App\Company;
@@ -15,17 +13,21 @@ class FrontController extends Controller
     public function showhome (){
      return view('page.home');
     }
+
     public function showJoblist (){
-        // $data=DB::table('posts')->get();
 
-        // echo "<pre>";
-        // print_r($data);
-
-            $post= Post::all();
+            $post= Post::orderBy('created_at', 'desc')->paginate(10);
             return view('page.JobList')->with('posts',$post);
-       // return view('page.joblist');
     }
     public function showCategory (){
         return view('page.JobCategories');
+    }
+
+    public function showCompany (){
+        return view('page.companyList');
+    }
+
+    public function showLocation (){
+        return view('page.jobLocation');
     }
 }

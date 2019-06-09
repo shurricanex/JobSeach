@@ -2,7 +2,7 @@
           <div class="container-fluid wall shadow">
                 <div class="row top-menu">
                     <div class="col-1 div1">
-                        <a href="/home" ><img src="{{asset('frontEnd')}}/img/IP-logo@3x.png"></a>
+                        <a href="/" ><img src="{{asset('frontEnd')}}/img/IP-logo@3x.png"></a>
                     </div>
                     <div class="col-9 nav_list" >
                         <ul>
@@ -16,7 +16,7 @@
                                 <a href="/company">Company List</a>
                             </li>
                             <li>
-                                <a href="/joblocation">Job Location</a>
+                                <a href="/location">Job Location</a>
                             </li>
                         </ul>
                     </div>

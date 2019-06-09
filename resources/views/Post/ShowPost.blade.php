@@ -13,6 +13,7 @@
 					<button class=" btn btn-success  iphone_input " type="submit">Search</button>
                 </div>
             </div>
+            <h3  class="btn btn-info"> <a href="/joblist">Back </a></h3>
             <h2> {{$showPost->position}}</h2>
             <small>{{$showPost->description_job}}</small>
             <p>Written on  {{$showPost->created_at}}</p>

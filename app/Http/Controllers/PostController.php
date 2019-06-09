@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use DB;
 
 class PostController extends Controller
 {
@@ -36,7 +37,22 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this -> validate($request, [
+            'Position'=> 'required',
+            'Job_type'  => 'required',
+            'Description'  => 'required',
+            'contact'  => 'required'
+        ]);
+
+        $newPost=new Post;
+        $newPost->position=$request->input('Position');
+        $newPost->Job_type=$request->input('Job_type');
+        $newPost->contact_num=$request->input('contact');
+        $newPost->description_job=$request->input('Description');
+        $newPost->save();
+
+
+        return redirect('/joblist')->with('Success', 'New Post created');
     }
 
     /**

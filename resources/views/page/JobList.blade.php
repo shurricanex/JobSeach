@@ -1,5 +1,4 @@
 @extends('app.head')
-{{-- //@extends('app.navbar') --}}
 @section('content')
     <div style="margin-top: 100px" class="container">
         <div class="container">
@@ -17,6 +16,7 @@
             </div>
             @if(count($posts)>0)
             @foreach ($posts as $post)
+
                 <div class="well">
                 <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
                 <p>write on {{$post->created_at}}</p>
@@ -27,6 +27,5 @@
       @endif
 
 		</div>
-
     </div>
 @endsection
