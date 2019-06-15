@@ -1,5 +1,5 @@
 
-          <div class="container-fluid wall shadow">
+          <div class="container-fluid wall shadow" >
                 <div class="row top-menu">
                     <div class="col-1 div1">
                         <a href="/" ><img src="{{asset('frontEnd')}}/img/IP-logo@3x.png"></a>
@@ -36,8 +36,8 @@
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
         
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                        <div class="dropdown-menu dropdown-menu-right" style="background-image: linear-gradient(to right, rgb(3, 107, 34) 20%, #0ab1f3); height:4em;width:1em; text-align:center" labelledby="navbarDropdown">
+                                            <a class="dropdown-item"  href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
