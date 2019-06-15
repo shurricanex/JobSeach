@@ -19,5 +19,14 @@ Route::get('/joblist', 'FrontController@showJoblist');
 Route::get('/category', 'FrontController@showCategory');
 Route::get('/company', 'FrontController@showCompany');
 Route::get('/location', 'FrontController@showLocation');
+Route::get('/register', 'FrontController@showRegistration');
 
 Route::resource('posts', 'PostController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
