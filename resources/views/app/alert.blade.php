@@ -1,4 +1,4 @@
-<div style="margin-top: 100px">
+<div style="margin-top: 4em">
         @if(count($errors)>0)
         @foreach ($errors->all() as $error )
             <div class="container">
