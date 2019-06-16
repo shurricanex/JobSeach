@@ -5,7 +5,7 @@
 <!-- first-section -->
 <div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url('img/work5.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100%;" data-aos="fade" data-stellar-background-ratio="0.5">
 
-<div class="container">
+<div class="container" >
         <div class="row align-items-center">
             <div class="col-12" data-aos="fade">
 

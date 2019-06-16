@@ -38,7 +38,7 @@
 <body>
     @extends('app.navbar')
     @include('app.alert')
-             <div class="container">
+             <div>
                 @yield('content')
            </div>
 

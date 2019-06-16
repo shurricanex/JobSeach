@@ -20,7 +20,7 @@ body
 }
 .wall
 {
-	
+
 	/* background-color: green; */
 	background-image: linear-gradient(to right, rgb(3, 107, 34) 20%, #0ab1f3);
 }
@@ -239,6 +239,7 @@ position:absolute;
 
 }
 .container-fluid {
+    height: 70px;
 	position: fixed;
 	top:0;
 	z-index:1;
