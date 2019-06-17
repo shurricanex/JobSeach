@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88f631ca-f1ea-49b5-8983-3150c20d3353" name="Default Changelist" comment="" />
+    <list default="true" id="88f631ca-f1ea-49b5-8983-3150c20d3353" name="Default Changelist" comment="header">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontEnd/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontEnd/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/Home.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +287,7 @@
       <workItem from="1560674827790" duration="309000" />
       <workItem from="1560675165911" duration="8951000" />
       <workItem from="1560701275539" duration="278000" />
-      <workItem from="1560733168232" duration="1641000" />
+      <workItem from="1560733168232" duration="1446000" />
     </task>
     <task id="LOCAL-00001" summary="Css : Fix background and log in and register and acc">
       <created>1560691434744</created>
@@ -299,18 +303,11 @@
       <option name="project" value="LOCAL" />
       <updated>1560693053867</updated>
     </task>
-    <task id="LOCAL-00003" summary="header">
-      <created>1560749060412</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1560749060412</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12669000" />
+    <option name="totallyTimeSpent" value="12474000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,6 +320,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18085106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

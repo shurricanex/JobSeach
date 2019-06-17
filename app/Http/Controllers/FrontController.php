@@ -30,4 +30,7 @@ class FrontController extends Controller
     public function showLocation (){
         return view('page.jobLocation');
     }
+    public function showRegistration(){
+        return view('auth.register');
+    }
 }
