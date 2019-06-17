@@ -56,6 +56,7 @@
               </div>
 
           </div>
+    <div class="scroll-down"></div>
        </div>
 </div>
 <!-- end of first section -->
@@ -68,23 +69,23 @@
 <div class=" mx-auto">
 <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
 
-    <a  class="btn btn-success btn2" id="educat"><span><img src="img/engineer.png" class="img3" ></span><br><br> Engineering</a>
+    <a  class="btn myHover btn2" id="educat"><span><img src="img/engineer.png" class="img3" ></span><br><br> Engineering</a>
 
 </div>
 </div>
 <div class=" mx-auto">
 <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-                <a  class="btn btn-success btn2" id="account"><span><img src="img/acc.jpg" class="img3" ></span><br><br> Accounting</a>
+                <a  class="btn myHover btn2" id="account"><span><img src="img/acc.jpg" class="img3" ></span><br><br> Accounting</a>
             </div>
             </div>
             <div class=" mx-auto">
             <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
-                <a href="#" class="btn btn-success btn2"><span><img src="img/it.jpg" class="img3"></span><br><br> Information Technology</a>
+                <a href="#" class="btn myHover btn2"><span><img src="img/it.jpg" class="img3"></span><br><br> Information Technology</a>
             </div>
             </div>
             <div class=" mx-auto">
             <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                <a href="#" class="btn btn-success btn2"><span><img src="img/design.png" class="img3"></span><br><br> Designer</a>
+                <a href="#" class="btn myHover btn2"><span><img src="img/design.png" class="img3"></span><br><br> Designer</a>
             </div>
             </div>
 
