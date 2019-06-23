@@ -16,7 +16,8 @@
                                <div class="row" >
 
                                               <div class="col-xl-3 col-md-6 col-12 mb-3 mr-0">
-                                                   <input class="form-control iphone_input shadow" type="search " placeholder="Input the major name" aria-label="Search" >
+                                                  <form action="/search" method="get">
+                                                   <input class="form-control iphone_input shadow" type="search " placeholder="Input the major name" aria-label="Search" name="search" >
                                                </div>
                                                      <div class="col-xl-3 col-md-6 col-12 mb-3">
                                                            <select name="catagories" class="form-control iphone_input2 shadow" >
@@ -33,7 +34,7 @@
 
                                                              </select></div>
                                                              <div class="col-xl-3 col-md-6 col-12 mb-3 ">
-                                                                  <select name="catagories" class="form-control iphone_input2 shadow">
+                                                                  <select name="location" class="form-control iphone_input2 shadow">
                                                                          <option value="accounting">Kampot</option>
                                                                                  <option value="it">Phnom Penh</option>
                                                                                  <option value="it">Pursat</option>
@@ -48,6 +49,7 @@
 
                                                                   <div class="col-xl-2 col-md-6 col-12   ">
                                                                           <button class=" btn btn-success btn-block iphone_input2 shadow" type="submit">Search</button></div>
+                                               </form>
                                </div>
 
 
@@ -89,8 +91,38 @@
             </div>
             </div>
 
-
 </div></div></div>
+{{--section for job data--}}
+<div>
+{{--    display data--}}
+     <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
+         <div class="col-xl-6 col-md-6 col-12">
+            <div class="div2 p-2 mb-3 mx-auto">
+                <div class="row">
+                    <div class="col-3 ">
+                        <img src="">
+                    </div>
+                    <div class="col-9">
+{{--                        fetch data --}}
+                        @if(count($posts)>0)
+                            @foreach ($posts as $post)
+                                <div class="well">
+                                    <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
+                                    <p>write on {{$post->created_at}}</p>
+                                </div>
+                            @endforeach
+                        @else
+                            <p> No post found</p>
+                        @endif
+
+                    </div>
+
+                </div>
+            </div>
+         </div>
+     </a>
+{{--    end display data--}}
+</div>
 <div class="container slide">
 <div class="row" id="jobcategory"></div>
 <div class="row" id="accounting"></div>

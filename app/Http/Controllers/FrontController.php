@@ -11,13 +11,18 @@ class FrontController extends Controller
     }
 
     public function showhome (){
-     return view('page.home');
+        $post= Post::orderBy('created_at', 'desc')->paginate(10);
+        return view('page.home')->with('posts',$post);
     }
 
     public function showJoblist (){
 
             $post= Post::orderBy('created_at', 'desc')->paginate(10);
             return view('page.JobList')->with('posts',$post);
+    }
+    public function search(){
+        $post=Post::orderBy('created_at', 'desc')->paginate(10);
+        return view('page.Home')->with('posts',$post);
     }
     public function showCategory (){
         return view('page.JobCategories');

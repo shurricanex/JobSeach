@@ -14,6 +14,7 @@
                     <h1 class=" btn btn-success"> <a href="/posts/create"> Create </a></h1>
                 </div>
             </div>
+{{--            display data--}}
             @if(count($posts)>0)
             @foreach ($posts as $post)
 

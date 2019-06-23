@@ -100,4 +100,9 @@ class PostController extends Controller
     {
         //
     }
+    public function search(Request $request){
+        $search = $request->get('search');
+        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+        return view('page.home')->with('posts',$post);
+    }
 }
