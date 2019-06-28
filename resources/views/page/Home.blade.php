@@ -112,7 +112,7 @@
                                 </div>
                             @endforeach
                         @else
-                            <p> No post found</p>
+                            <p> Job not found</p>
                         @endif
 
                     </div>
