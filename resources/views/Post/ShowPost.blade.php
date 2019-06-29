@@ -17,6 +17,15 @@
             <h2> {{$showPost->position}}</h2>
             <small>{{$showPost->description_job}}</small>
             <p>Written on  {{$showPost->created_at}}</p>
+            <hr>
+            <a href="/posts/{{$showPost->PID}}/edit" class="btn btn-default">Edit</a>
+
+            {!! Form::open(['action'=> ['PostController@destroy', $showPost->PID], 'method'=>'POST', 'class'=>'pull-right']) !!}
+
+            {!! Form::hidden('_method', 'DELETE') !!}
+            {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
+            {!! Form::close() !!}
+
 
 		</div>
     </div>
