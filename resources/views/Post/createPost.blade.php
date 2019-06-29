@@ -10,7 +10,7 @@
                 </div>
                 <div class="form-group">
                         {!! Form::label('jobtype', 'Job type') !!}
-                        {!! Form::text('Job_type', '', ['class'=>'form-control', 'placeholder'=>'What kind of job u chose?']) !!}
+                        {!! Form::text('Job_type', '', ['class'=>'form-control', 'placeholder'=>'Full time or part time']) !!}
                 </div>
                 <div class="form-group">
                         {!! Form::label('Description', 'Description of Job') !!}
