@@ -2,18 +2,23 @@
 @section('content')
     <div style="margin-top: 100px" class="container">
         <div class="container">
+            <form action="/search1" method="get" >
 			<div class="row ">
+
 				<div class="col-md-2 col-2 "></div>
-				<div class=" col-sm-6  col-12 mt-4 mb-2">
-					<input class="form-control float-left  " type="search" placeholder="Input your interesting job" aria-label="Search">
-				</div>
+
+                    <div class=" col-sm-6  col-12 mt-4 mb-2">
+
+					<input class="form-control float-left  " name="search" type="search" placeholder="Input your interesting job" aria-label="Search">
+                    </div>
 				<div class=" col-sm-2  col-12 mt-4 mb-0">
 					<!-- <a href="#" class="btn btn-success float-left" type="submit">Search</a> -->
                     <button class=" btn btn-success  iphone_input " type="submit">Search</button> <br><br>
-
-                    <h1 class=" btn btn-success"> <a href="/posts/create"> Create </a></h1>
                 </div>
-            </div>
+
+                </form>
+
+        </div>
 {{--            display data--}}
     {{--  <div class="row">
         <div class="col-9">
