@@ -15,13 +15,12 @@
 					<!-- <a href="#" class="btn btn-success float-left" type="submit">Search</a> -->
                     <button class=" btn btn-success  iphone_input " type="submit">Search</button> <br><br>
                 </div>
-
-                </form>
-
-        </div>
+            </div>
+		</div>
 {{--            display data--}}
     {{--  <div class="row">
-        <div class="col-9">
+        <div class="col-xl-12">
+			
             @if(count($posts)>0)
                  @foreach ($posts as $post)
                 <div class="well">
@@ -30,33 +29,59 @@
                 </div>
            @endforeach
       @else
+			
         <p> No post found</p>
       @endif
         </div>
      </div>  --}}
-     <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
-        <div class="col-xl-6 col-md-6 col-12">
-           <div class="div2 p-2 mb-3 mx-auto">
-               <div class="row">
-                   <div class="col-9">
-{{--                        fetch data --}}
-                       @if(count($posts)>0)
-                           @foreach ($posts as $post)
-                               <div class="well">
-                                   <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
-                                   <p>write on {{$post->created_at}}</p>
-                               </div>
-                           @endforeach
-                       @else
-                           <p> Job not found</p>
-                       @endif
+<!--	my design you can add more the laravel code because i don't know some code will do -->
+	 <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
+		<div class="container mt-3">
+			<div class="row">
+			{{--                        fetch data --}}
+			   @if(count($posts)>0)
+				   @foreach ($posts as $post)
+					<div class="col-xl-6 float-left mt-4">
+						<div class="col-xl-12 list_box">
+							<div class="col-xl-12 ">
+								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
+								   <p>write on {{$post->created_at}}</p>
+							</div>
+						</div>
+					</div>
+				   @endforeach
+			   @else
+				   <p> Job not found</p>
+			   @endif
+							
+					
+			</div>
+		</div>
+	</a>
+<!--		end of my design-->
+<!--
+			   <div class="">
+				   <div class="row">
+					   <div class="col-9">
+	{{--                        fetch data --}}
+						   @if(count($posts)>0)
+							   @foreach ($posts as $post)
+								   <div class="list_box">
+									   <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
+									   <p>write on {{$post->created_at}}</p>
+								   </div>
+							   @endforeach
+						   @else
+							   <p> Job not found</p>
+						   @endif
 
-                   </div>
+					   </div>
 
-               </div>
-           </div>
-        </div>
-    </a>
-
+				   </div>
+			   </div>
+-->
+<!--			</div>-->
+	<!--    </a>-->
+<!--	</div>-->
 </div>
 @endsection
