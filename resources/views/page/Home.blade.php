@@ -95,6 +95,36 @@
 {{--section for job data--}}
 <div>
 {{--    display data--}}
+	<!--	my design you can add more the laravel code because i don't know some code will do -->
+	 <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
+		<div class="container mt-3">
+			<div class="row">
+			{{--                        fetch data --}}
+			   @if(count($posts)>0)
+				   @foreach ($posts as $post)
+					<div class="col-xl-6 float-left mt-4">
+						<div class="col-xl-12 list_box">
+							<div class="col-xl-2 float-left">
+                        		<img src="../../../public/img/AIALogo.JPG">
+                   			 </div>
+							<div class="col-xl-10 float-left">
+								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
+								   <p>write on {{$post->created_at}}</p>
+							</div>
+						</div>
+					</div>
+				   @endforeach
+			   @else
+				   <p> Job not found</p>
+			   @endif
+							
+					
+			</div>
+		</div>
+	</a>
+<!--		end of my design-->
+	
+<!--
      <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
          <div class="col-xl-6 col-md-6 col-12">
              @if(count($posts)>0)
@@ -118,6 +148,7 @@
             @endif
          </div>
      </a>
+-->
 {{--    end display data--}}
 </div>
 <div class="container slide">
