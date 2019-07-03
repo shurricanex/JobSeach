@@ -159,6 +159,7 @@
 <div class="row" id="accounting"></div>
 <div class="row" id="education"></div>
 </div>
+
 <div class=" box modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
     <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -287,20 +288,9 @@ THE GREAT DUKE HOTEL, 2nd Floor Regency Complex C, Unit No C2/6, Preah Monivong 
 </div>
 </footer>
 
-</script>
+
 <div id="hello"></div>
- <script src="file js/index.js"></script>
-<!-- <script>
-$(document).ready(function(){
-$('#bar').click(function(){
-//			var sub_nav=$('.sub_nav');
-    $('.sub_nav').toggle();
-//			alert();
-});
-});
 
-
-</script> -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 AOS.init();

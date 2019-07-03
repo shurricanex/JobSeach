@@ -20,6 +20,11 @@ class FrontController extends Controller
             $post= Post::orderBy('created_at', 'desc')->paginate(10);
             return view('page.JobList')->with('posts',$post);
     }
+    public function showJoblistCompany (){
+
+            $post= Post::orderBy('created_at', 'desc')->paginate(10);
+            return view('page.JobList_company')->with('posts',$post);
+    }
     public function search(){
         $post=Post::orderBy('created_at', 'desc')->paginate(10);
         return view('page.Home')->with('posts',$post);
