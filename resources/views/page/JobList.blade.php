@@ -13,7 +13,7 @@
 				<div class=" col-sm-2  col-12 mt-4 mb-0">
 					<!-- <a href="#" class="btn btn-success float-left" type="submit">Search</a> -->
                     <button class=" btn btn-success  iphone_input " type="submit">Search</button> <br><br>
-					
+
                     <h1 class=" btn btn-success"> <a href="/posts/create"> Create </a></h1>
                 </div>
             </div>
@@ -77,7 +77,7 @@
 								   <!-- <a href="/posts/{{$post->PID}}"> {{$post->position}}</a> -->
 								   <p class="h3">{{$post->position}}</p>
 								   <p>write on {{$post->created_at}}</p>
-								   
+
 
 							</div>
 						</div>
@@ -86,8 +86,8 @@
 			   @else
 				   <p> Job not found</p>
 			   @endif
-							
-					
+
+
 			</div>
 		</div>
 	</a>
@@ -102,7 +102,7 @@
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
-					</div>  
+					</div>
 					<div class="text-center">
 						<h2>Please read carefully about the job detail <span class="text-info h1">!</span></h2>
 					</div>
@@ -121,7 +121,7 @@
 							<span class="h6 text-success">Phone <br></span>
 							<i class="fas fa-phone"></i> {{$showPost->contact_num}} <br>
 						</div>
-						<div my-1> 
+						<div my-1>
 							<span class="h6 text-success">Email <br></span>
 							<i class="fas fa-envelope"></i> {{$showPost->email}}
 						</div>
