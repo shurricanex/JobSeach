@@ -39,6 +39,7 @@
             {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
             {!! Form::close() !!}
             <br>
+            <hr>
 
         </div>
 @endsection

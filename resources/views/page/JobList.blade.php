@@ -14,37 +14,21 @@
                 </div>
             </div>
 		</div>
-{{--            display data--}}
-    {{--  <div class="row">
-        <div class="col-xl-12">
 
-            @if(count($posts)>0)
-                 @foreach ($posts as $post)
-                <div class="well">
-                    <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
-                    <p>write on {{$post->created_at}}</p>
-                </div>
-           @endforeach
-      @else
-
-        <p> No post found</p>
-      @endif
-        </div>
-     </div>  --}}
-
-
-<!--	my design you can add more the laravel code because i don't know some code will do -->
 	 <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
 		<div class="container mt-3">
 			<div class="row">
-			{{--                        fetch data --}}
+			{{--fetch data --}}
 			   @if(count($posts)>0)
 				   @foreach ($posts as $post)
 					<div class="col-xl-6 float-left mt-4">
 						<div class="col-xl-12 list_box border border-warning">
 							<div class="col-xl-12 ">
-								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
-								   <p>write on {{$post->created_at}}</p>
+                                   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a><br>
+                                   <small>post at  : {{$post->created_at}} </small>
+                                   <p> Type of job : {{$post->Job_type}} </p>
+                                   <p>Location : {{$post->location}}</p>
+								   {{--  <p>write on {{$post->created_at}}</p>  --}}
 							</div>
 						</div>
 					</div>
@@ -52,38 +36,9 @@
 			   @else
 				   <p> Job not found</p>
 			   @endif
-
-
 			</div>
 		</div>
-
 	</a>
-<!--		end of my design-->
-<!--
-			   <div class="">
-				   <div class="row">
-					   <div class="col-9">
-	{{--                        fetch data --}}
-						   @if(count($posts)>0)
-							   @foreach ($posts as $post)
-								   <div class="list_box">
-									   <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
-									   <p>write on {{$post->created_at}}</p>
-								   </div>
-							   @endforeach
-						   @else
-							   <p> Job not found</p>
-						   @endif
-
-					   </div>
-
-				   </div>
-			   </div>
--->
-<!--			</div>-->
-	<!--    </a>-->
-<!--	</div>-->
+<!--end of my design-->
 </div>
-<a href="/Post/attachfile" class="btn btn-success">APPLY</a>
-
 @endsection
