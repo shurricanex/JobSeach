@@ -64,7 +64,7 @@ class PostController extends Controller
     public function show($PID)
     {
         $showPost=Post::find($PID);
-        return view('Post.ShowPost')->with('showPost', $showPost);
+        return view('page.JobList')->with('showPost', $showPost);
     }
 
     /**
