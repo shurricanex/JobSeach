@@ -24,9 +24,5 @@
     <h1>This is Category  pages</h1>
     <p>this is page of category of job</p>
 </div>
-    {{--  <div class="container">  --}}
-
-    {{--  </div>  --}}
-
 
 @endsection

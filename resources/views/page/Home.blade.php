@@ -127,28 +127,25 @@
 <!--
      <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
          <div class="col-xl-6 col-md-6 col-12">
-            <div class="div2 p-2 mb-3 mx-auto">
-                <div class="row">
-                    <div class="col-3 ">
-                        <img src="">
-                    </div>
-                    <div class="col-9">
-{{--                        fetch data --}}
-                        @if(count($posts)>0)
-                            @foreach ($posts as $post)
+             @if(count($posts)>0)
+                @foreach ($posts as $post)
+                    <div class="div2 p-2 mb-3 mx-auto">
+                        <div class="row">
+                            <div class="col-3 ">
+                                <img src="">
+                            </div>
+                            <div class="col-9">
                                 <div class="well">
                                     <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
                                     <p>write on {{$post->created_at}}</p>
                                 </div>
-                            @endforeach
-                        @else
-                            <p> Job not found</p>
-                        @endif
-
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-            </div>
+                 @endforeach
+            @else
+                <p> Job not found</p>
+            @endif
          </div>
      </a>
 -->
