@@ -24,7 +24,7 @@
 					<div class="col-xl-6 float-left mt-4">
 						<div class="col-xl-12 list_box border border-warning">
 							<div class="col-xl-12 ">
-                                   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a><br>
+                                   <a href="/posts/{{$post->PID}}"> <h4>{{$post->position}}</h4></a><br>
                                    <small>post at  : {{$post->created_at}} </small>
                                    <p> Type of job : {{$post->Job_type}} </p>
                                    <p>Location : {{$post->location}}</p>
