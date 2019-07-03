@@ -14,7 +14,7 @@
 				<div class=" col-sm-2  col-12 mt-4 mb-0">
 					<!-- <a href="#" class="btn btn-success float-left" type="submit">Search</a> -->
                     <button class=" btn btn-success  iphone_input " type="submit">Search</button> <br><br>
-                    <h1 class=" btn btn-success"> <a href="/posts/create"> Create </a></h1>
+                    {{-- <h1 class=" btn btn-success"> <a href="/posts/create"> Create </a></h1> --}}
                 </div>
             </div>
 		</div>
