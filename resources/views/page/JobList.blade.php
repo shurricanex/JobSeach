@@ -32,6 +32,8 @@
       @endif
         </div>
      </div>  --}}
+		
+
 <!--	my design you can add more the laravel code because i don't know some code will do -->
 	 <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
 		<div class="container mt-3">
@@ -40,7 +42,7 @@
 			   @if(count($posts)>0)
 				   @foreach ($posts as $post)
 					<div class="col-xl-6 float-left mt-4">
-						<div class="col-xl-12 list_box">
+						<div class="col-xl-12 list_box border border-warning">
 							<div class="col-xl-12 ">
 								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
 								   <p>write on {{$post->created_at}}</p>
@@ -55,6 +57,7 @@
 					
 			</div>
 		</div>
+		
 	</a>
 <!--		end of my design-->
 <!--
@@ -82,4 +85,6 @@
 	<!--    </a>-->
 <!--	</div>-->
 </div>
+<a href="/Post/attachfile" class="btn btn-success">APPLY</a>
+
 @endsection
