@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Companys;
 use DB;
 
 class PostController extends Controller
@@ -41,13 +42,15 @@ class PostController extends Controller
             'Position'=> 'required',
             'Job_type'  => 'required',
             'Description'  => 'required',
-            'contact'  => 'required'
+            'contact'  => 'required',
+            'locatin'=>'required'
         ]);
 
         $newPost=new Post;
         $newPost->position=$request->input('Position');
         $newPost->Job_type=$request->input('Job_type');
         $newPost->contact_num=$request->input('contact');
+        $newPost->location=$request->input('location');
         $newPost->description_job=$request->input('Description');
         $newPost->save();
         return redirect('/joblist')->with('Success', 'New Post created');
@@ -62,6 +65,7 @@ class PostController extends Controller
     public function show($PID)
     {
         $showPost=Post::find($PID);
+        //$company=com::all();
         return view('Post.ShowPost')->with('showPost', $showPost);
     }
 
@@ -90,12 +94,14 @@ class PostController extends Controller
             'Position'=> 'required',
             'Job_type'  => 'required',
             'Description'  => 'required',
-            'contact'  => 'required'
+            'contact'  => 'required',
+            'location'=>'required'
         ]);
         $newPost=Post::find($id);
         $newPost->position=$request->input('Position');
         $newPost->Job_type=$request->input('Job_type');
         $newPost->contact_num=$request->input('contact');
+        $newPost->location=$request->input('location');
         $newPost->description_job=$request->input('Description');
         $newPost->save();
         return redirect('/joblist')->with('Success', 'New Post created');
@@ -113,7 +119,7 @@ class PostController extends Controller
         $deletePost->delete();
         return redirect('/joblist')->with('Success', 'Post deleted');
     }
-    
+
     public function search(Request $request){
         $search = $request->get('search');
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
