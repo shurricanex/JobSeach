@@ -2,15 +2,17 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
-use App\Company;
-use DB;
+
 class FrontController extends Controller
 {
     public function index(){
-    return view('frontView.home.homeContent');
+
+        return view('page.Home');
+
     }
 
     public function showhome (){
+
         $post= Post::orderBy('created_at', 'desc')->paginate(10);
         return view('page.home')->with('posts',$post);
     }

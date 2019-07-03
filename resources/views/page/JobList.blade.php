@@ -13,8 +13,7 @@
                     </div>
 				<div class=" col-sm-2  col-12 mt-4 mb-0">
 					<!-- <a href="#" class="btn btn-success float-left" type="submit">Search</a> -->
-                    <button class=" btn btn-success  iphone_input " type="submit">Search</button> <br><br>
-                </div>
+                    <button class=" btn btn-success  iphone_input " type="submit">Search</button> <br><br></div>
             </div>
 		</div>
 {{--            display data--}}

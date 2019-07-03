@@ -14,8 +14,13 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::group(['middleware'=>'auth'], function(){
+
+    Route::get('/joblist', 'FrontController@showJoblist');
+});
 Route::get('/', 'FrontController@showhome');
-Route::get('/joblist', 'FrontController@showJoblist');
+
 Route::get('/search', 'PostController@search');
 Route::get('/search1', 'FrontController@search1');
 Route::get('/category', 'FrontController@showCategory');
@@ -26,7 +31,6 @@ Route::resource('posts', 'PostController');
 
 Auth::routes();
 
-Route::get('/Home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
