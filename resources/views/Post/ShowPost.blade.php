@@ -32,6 +32,7 @@
             </div>
             <div class="text-success h5 mx-2">Contact Information <hr></div>
         @if(!Auth::guest())
+            @if(Auth::user()->id == $showPost->user_id)
             <a href="/posts/{{$showPost->PID}}/edit" class="btn btn-default bg-secondary">Edit</a>
 
             {!! Form::open(['action'=> ['PostController@destroy', $showPost->PID], 'method'=>'POST', 'class'=>'pull-right']) !!}
@@ -40,6 +41,7 @@
             {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
             {!! Form::close() !!}
             <br>
+            @endif
          @endif
         </div>
 @endsection

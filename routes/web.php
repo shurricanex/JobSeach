@@ -29,7 +29,7 @@ Route::get('/category', 'FrontController@showCategory');
 Route::get('/company', 'FrontController@showCompany');
 Route::get('/location', 'FrontController@showLocation');
 Route::get('/register', 'FrontController@showRegistration');
-//Route::get('/company', 'FrontController@showCompanyDashboard');
+Route::get('/companyDashboard', 'DasboardController@index');
 
 Route::resource('posts', 'PostController');
 Auth::routes();

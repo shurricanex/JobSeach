@@ -71,4 +71,7 @@ class User extends Authenticatable
     {
         return null !== $this->roles()->where('name',$role)->first();
     }
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }

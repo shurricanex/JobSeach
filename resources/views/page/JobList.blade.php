@@ -88,6 +88,6 @@
 	<!--    </a>-->
 <!--	</div>-->
 </div>
-<a href="/Post/attachfile" class="btn btn-success">APPLY</a>
+{{--<a href="/Post/attachfile" class="btn btn-success">APPLY</a>--}}
 
 @endsection

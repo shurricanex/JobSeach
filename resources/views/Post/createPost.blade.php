@@ -1,28 +1,8 @@
 @extends('app.head')
-@extends('app.companyDashboard')
+{{--@extends('app.companyDashboard')--}}
 @section('content')
     <div style="margin-top: 100px" class="container">
 
-    <div class="container">
-        <div class="content">
-
-            <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
-                <div class="containerpic">
-                    <label for="file">
-
-                        <img id="pic" src="{{asset('img/AIALogo.JPG')}}" height="100px" width="100px" alt="pictoupload">
-
-                    </label>
-                    <input type="file" name="file" id="file" onchange="readURL(this);" style="display: none">
-                    <div class="imgOverlay"></div>
-                    <input type="submit" class="uploadButton" value="upload" id ="upload" name="submit">
-                </div>
-                {{--            <input type="hidden" value="{{ csrf_token() }}" name="_token">--}}
-            </form>
-
-        </div>
-        {{--    <img src="{{asset('img/AIALogo.JPG')}}" height="100px" width="100px" >--}}
-    </div>
         <div class="container">
                 <h3  class="btn btn-default  bg-light"> <a href="/joblist">Back </a></h3>
             <h1>Create a new Post of job.</h1>

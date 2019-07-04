@@ -309,7 +309,7 @@
 		
 		</script>
 			<div id="hello"></div>
-			 <script src="file js/index.js"></script> 
+			 <script src="filejs/index.js"></script>
 	 <!-- <script>
 		$(document).ready(function(){
 			$('#bar').click(function(){
