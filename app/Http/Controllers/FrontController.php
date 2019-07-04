@@ -15,13 +15,13 @@ class FrontController extends Controller
 
     public function showhome (){
 
-        $post= Post::orderBy('created_at', 'desc')->paginate(10);
+        $post= Post::orderBy('created_at', 'desc')->paginate(4);
         return view('page.home')->with('posts',$post);
     }
 
     public function showJoblist (){
 
-            $post= Post::orderBy('created_at', 'desc')->paginate(10);
+            $post= Post::orderBy('created_at', 'desc')->paginate(6);
             return view('page.JobList')->with('posts',$post);
     }
 
@@ -30,14 +30,14 @@ class FrontController extends Controller
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
         return view('page.JobList')->with('posts',$post);
     }
-    
+
     public function showCategory (){
-        $post= Post::orderBy('created_at', 'desc')->paginate(10);
+        $post= Post::orderBy('created_at', 'desc')->paginate(6);
         return view('page.JobCategories')->with('posts',$post);
     }
 
     public function showCompany (){
-        $com=company::all();
+        $com=company::orderBy('created_at', 'desc')->paginate(6);
         return view('page.companyList')->with('company',$com);
     }
 

@@ -14,7 +14,7 @@
                     <div class="col-xl-6 float-left mt-4">
                         <div class="col-xl-12 list_box border border-warning">
                             <div class="col-xl-12 ">
-                                    <a href="#" class="h3 text-primary"> {{$com->Cname}}</a><br>
+                                    <a href="/CompanyPost/{{$com->CID}}" class="h3 text-primary"> {{$com->Cname}}</a><br>
                                     <small class="text-secondary" style="font-size:11px">post : {{$com->created_at}} </small>
                                     <p>Location : {{$com->location}}</p>
                             </div>
@@ -25,6 +25,8 @@
                     <p> Job not found</p>
                 @endif
             </div>
+            <br>
+            {{$company->links()}}
         </div>
     </a>
 

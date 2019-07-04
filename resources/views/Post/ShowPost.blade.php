@@ -1,20 +1,11 @@
 @extends('app.head')
 {{-- //@extends('app.navbar') --}}
 @section('content')
-    {{-- <div style="margin-top: 100px" class="container">
-
-            <h3  class="btn btn-info"> <a href="/joblist">Back </a></h3>
-            <h2> {{$showPost->position}}</h2>
-            <small>{{$showPost->description_job}}</small>
-            <p>Written on  {{$showPost->created_at}}</p>
-            <hr>
-
-		</div>
-    </div> --}}
     <br>
     <div class="container">
-            <h3  class="btn btn-default  bg-light" > <a href="/joblist">Back </a></h3>
+
     <div class="container bg-light "     >
+        <h3  class="btn btn-default  bg-light" style="margin-left: 98%"> <a href="/joblist">X </a></h3>
         <div class="text-center">
             <h2>Please read carefully about the job detail <span class="text-info h1">!</span></h2>
             </div>

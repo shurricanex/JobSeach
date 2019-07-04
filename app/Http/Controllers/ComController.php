@@ -43,10 +43,10 @@ class ComController extends Controller
 
         $newPost=new company;
         $newPost->Cname=$request->input('name');
-        $newPost->location=$request->input('location');
         $newPost->C_description=$request->input('Description');
+        $newPost->location=$request->input('location');
         $newPost->save();
-        return redirect('/category')->with('Success', 'New Post created');
+        return redirect('/company')->with('Success', 'New Post created');
     }
 
     /**
@@ -57,9 +57,9 @@ class ComController extends Controller
      */
     public function show($id)
     {
-        //
+        $showPost=company::find($id);
+        return view('Company.showCom')->with('showPost', $showPost);
     }
-
     /**
      * Show the form for editing the specified resource.
      *

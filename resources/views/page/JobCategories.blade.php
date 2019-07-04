@@ -19,8 +19,7 @@
             </tr>
         </table>
     </form>
-    <h1>This is Category  pages</h1>
-    <p>this is page of category of job</p>
+    <h1>All Job in Category</h1>
 
     </div>
   <div>
@@ -31,10 +30,17 @@
 			   @if(count($posts)>0)
 				   @foreach ($posts as $post)
 					<div class="col-xl-6 float-left mt-4">
-						<div class="col-xl-12 list_box">
-							<div class="col-xl-10 float-left">
-								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
-								   <p>write on {{$post->created_at}}</p>
+						<!-- <div class="col-xl-12 list_box">
+							<div class="col-xl-12 ">
+								   {{-- <a href="/posts/{{$post->PID}}"> {{$post->position}}</a> --}}
+								   {{-- <p class="h3">{{$post->position}}</p> --}}
+								   <p>write on {{$post->created_at}}</p> -->
+						<div class="col-xl-12 list_box border border-warning">
+							<div class="col-xl-12 ">
+                                   <a href="/posts/{{$post->PID}}" class="h2 text-primary"> {{$post->position}}</a><br>
+                                   {{-- <small class="text-secondary" style="font-size:11px">post : {{$post->created_at}} </small> --}}
+                                   <small> Type of job : {{$post->Job_type}} <br>
+                                        Location : {{$post->location}}</small>
 							</div>
 						</div>
 					</div>
@@ -42,37 +48,13 @@
 			   @else
 				   <p> Job not found</p>
 			   @endif
-
-
-			</div>
-		</div>
-	</a>
-      <!--		end of my design-->
-  <!--
-			   <div class="">
-				   <div class="row">
-					   <div class="col-9">
-	{{--                        fetch data --}}
-  @if(count($posts)>0)
-      @foreach ($posts as $post)
-          <div class="list_box">
-              <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
-									   <p>write on {{$post->created_at}}</p>
-								   </div>
-							   @endforeach
-  @else
-      <p> Job not found</p>
-@endif
-
-      </div>
-
-  </div>
-</div>
--->
-      <!--			</div>-->
-      <!--    </a>-->
-      <!--	</div>-->
-  </div>
+            </div>
+            <br>
+            {{$posts->links()}}
         </div>
+
+	</a>
+  </div>
+
 
 @endsection

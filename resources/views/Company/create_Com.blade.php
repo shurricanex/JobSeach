@@ -14,7 +14,7 @@
     {!! Form::open(['action'=>'ComController@store', 'Method'=>'POST']) !!}
         <div class="form-group">
             {!! Form::label('Name', 'Company name') !!}
-            {!! Form::text('Name', '', ['class'=>'form-control', 'placeholder'=>'  ']) !!}
+            {!! Form::text('name', '', ['class'=>'form-control', 'placeholder'=>'  ']) !!}
         </div>
         <div class="form-group">
                 {!! Form::label('Description', 'Description of Job') !!}

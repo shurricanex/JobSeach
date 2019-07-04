@@ -67,7 +67,6 @@ class PostController extends Controller
     public function show($PID)
     {
         $showPost=Post::find($PID);
-        //$company=com::all();
         return view('Post.ShowPost')->with('showPost', $showPost);
     }
 
