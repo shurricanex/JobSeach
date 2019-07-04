@@ -2,23 +2,25 @@
 
 @section('content')
 {{-- @extends('app.navbar') --}}
-<div class="container job_ca">
+<div class="container bg-light p4 mt-5">
     <form action="/search2" method="get">
-        <table class="table table-hover">
+        <table class=" btn_cata" >
             <tr >
                 <td><a class="h1 text-success">Job Category</a></td>
-                <td></td>
+                 <td></td>
             </tr>
             <tr>
-                <td><input class="btn btn-light" type="submit" name="search" id="" value="account"></td>
-                <td><input class="btn btn-light" type="submit" name="search" id="" value="engineer"></td>
+                <td ><input  type="submit" name="search" id="" value="account"> </td> 
+                <td><input  type="submit" name="search" id="" value="engineer"></td>
             </tr>
             <tr>
-                <td><input class="btn btn-light" type="submit" name="search" id="" value="teacher"></td>
-                <td><input class="btn btn-light" type="submit" name="search" id="" value="project manager"></td>
-            </tr>
-        </table>
-    </form>
+                <td> <input  type="submit" name="search" id="" value="teacher"></td>
+                <td> <input  type="submit" name="search" id="" value="project manager">
+                   
+               
+            </tr> 
+        </table> 
+    </form> 
     <h1>All Job in Category</h1>
 
     </div>
