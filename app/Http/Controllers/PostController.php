@@ -127,6 +127,15 @@ class PostController extends Controller
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
         return view('page.home')->with('posts',$post);
     }
-
+    public function search2(Request $request){
+        $search = $request->get('search');
+        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+        return view('page.JobCategories')->with('posts',$post);
+    }
+    public function search3(Request $request){
+        $search = $request->get('search');
+        $post = DB::table('posts')->where('location', 'like','%'.$search.'%')->paginate(5);
+        return view('page.JobLocation')->with('posts',$post);
+    }
 
 }

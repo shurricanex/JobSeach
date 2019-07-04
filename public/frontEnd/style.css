@@ -116,6 +116,13 @@
 	font-family: 'Open Sans', sans-serif;
 
 }
+
+.btn-light {
+    color: #212529;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
 /*a:hover{*/
 /*   text-decoration: none;	*/
 /*}*/

@@ -30,11 +30,7 @@ class FrontController extends Controller
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
         return view('page.JobList')->with('posts',$post);
     }
-    public function search2(Request $request){
-        $search = $request->get('search');
-        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
-        return view('page.JobCategories')->with('posts',$post);
-    }
+    
     public function showCategory (){
         $post= Post::orderBy('created_at', 'desc')->paginate(10);
         return view('page.JobCategories')->with('posts',$post);
@@ -46,7 +42,8 @@ class FrontController extends Controller
     }
 
     public function showLocation (){
-        return view('page.jobLocation');
+        $post= Post::orderBy('created_at', 'desc')->paginate(10);
+        return view('page.jobLocation')->with('posts',$post);
     }
     public function showRegistration(){
         return view('auth.register');
