@@ -43,7 +43,7 @@ class PostController extends Controller
             'Job_type'  => 'required',
             'Description'  => 'required',
             'contact'  => 'required',
-            'locatin'=>'required'
+            'location'=>'required'
         ]);
 
         $newPost=new Post;
