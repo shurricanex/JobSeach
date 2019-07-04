@@ -1,6 +1,32 @@
 @charset "utf-8";
 /* CSS Document */
 
+.container table{
+	background-color: black;
+	width: 100%;
+}
+.btn_cata tr td{
+	width: 50%;
+	height: 60px;
+	
+} 
+
+.btn_cata tr td input{
+	text-align: left;
+	width: 100%;
+	height: 60px;
+	border: none;
+	border-left:2px solid gray;
+	padding: 20px;
+	background: white;
+	font-size: 20px;
+	
+}
+
+.btn_cata tr td input:hover{
+	cursor: pointer;
+	background-color: gray;
+}
 /*.containerpic {*/
 /*    position: relative;*/
 /*    margin-top: 50px;*/
@@ -116,6 +142,7 @@
 	font-family: 'Open Sans', sans-serif;
 
 }
+
 /*a:hover{*/
 /*   text-decoration: none;	*/
 /*}*/
@@ -320,15 +347,6 @@ span{
 	width: 70px;
 	height: 70px;
 	margin-top: 30px;
-}
-/*job catagery*/
-.job_ca table tr:hover{
-	background-color: inherit;
-}
-
-.job_ca table tr td:hover{
-	background-color: #ccccb3;
-/*	background-color: blue;*/
 }
 
 /*responsive*/
