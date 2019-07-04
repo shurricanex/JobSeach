@@ -24,11 +24,11 @@
 					<div class="col-xl-6 float-left mt-4">
 						<div class="col-xl-12 list_box border border-warning">
 							<div class="col-xl-12 ">
-                                   <a href="/posts/{{$post->PID}}"> <h4>{{$post->position}}</h4></a><br>
-                                   <small>post at  : {{$post->created_at}} </small>
-                                   <p> Type of job : {{$post->Job_type}} </p>
-                                   <p>Location : {{$post->location}}</p>
-								   {{--  <p>write on {{$post->created_at}}</p>  --}}
+                                   <a href="/posts/{{$post->PID}}" class="h2 text-primary"> {{$post->position}}</a><br>
+                                   <small class="text-secondary" style="font-size:11px">post : {{$post->created_at}} </small>
+                                   <p> Type of job : {{$post->Job_type}} <br>
+                                          Location : {{$post->location}}</p>
+								    <!-- <p>write on {{$post->created_at}}</p>   -->
 							</div>
 						</div>
 					</div>
