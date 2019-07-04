@@ -4,11 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class company extends Model
+class Companys extends Model
 {
-    protected $tablename='Company'; 
-
-    public $primaryKey='CID';
-
+    protected $tablename='com';
+    public $primaryKey='Cid';
     public $timestamps=true;
 }
