@@ -25,8 +25,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create( Request $request)
     {
+        $request->user()->authorizeRoles('company');
         return view('post.createPost');
     }
 
@@ -38,6 +39,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         $this -> validate($request, [
             'Position'=> 'required',
             'Job_type'  => 'required',
