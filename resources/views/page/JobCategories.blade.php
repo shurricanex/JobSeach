@@ -21,9 +21,7 @@
         <td><a href="#" class="h4">Manager</a></td>
     </tr>
 </table>
-    <h1>This is Category  pages</h1>
-    <p>this is page of category of job</p>
-
+    <h1>All Categories:</h1>
     </div>
   <div>
   <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >

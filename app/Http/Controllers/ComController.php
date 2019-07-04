@@ -35,7 +35,18 @@ class ComController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this -> validate($request, [
+            'name'=> 'required',
+            'Description'  => 'required',
+            'location'=>'required'
+        ]);
+
+        $newPost=new company;
+        $newPost->Cname=$request->input('name');
+        $newPost->location=$request->input('location');
+        $newPost->C_description=$request->input('Description');
+        $newPost->save();
+        return redirect('/category')->with('Success', 'New Post created');
     }
 
     /**
