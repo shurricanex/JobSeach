@@ -7,7 +7,7 @@
 <form action="/search3" method="get">
     <table class="table table-hover">
         <tr>
-            <td><a class="h1 text-light">Job Location</a></td>
+            <td><a class="h1 text-success">Job Location</a></td>
             <td></td>
         </tr>
         <tr>

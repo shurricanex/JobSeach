@@ -119,8 +119,8 @@
 
 .btn-light {
     color: #212529;
-    background-color: #ffffff !important;
-    border-color: #ffffff !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
 
 /*a:hover{*/
