@@ -17,7 +17,7 @@
 
 Route::group(['middleware'=>'auth'], function(){
 
-    Route::resource('posts', 'PostController');
+
 });
 Route::get('/', 'FrontController@showhome');
 Route::get('/joblist', 'FrontController@showJoblist');
@@ -31,7 +31,7 @@ Route::get('/location', 'FrontController@showLocation');
 Route::get('/register', 'FrontController@showRegistration');
 //Route::get('/company', 'FrontController@showCompanyDashboard');
 
-
+Route::resource('posts', 'PostController');
 Auth::routes();
 
 
