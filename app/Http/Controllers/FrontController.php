@@ -37,7 +37,7 @@ class FrontController extends Controller
     }
 
     public function showCompany (){
-        $com=company::orderBy('created_at', 'desc')->paginate(6);
+        $com=company::orderBy('created_at', 'desc')->paginate(4);
         return view('page.companyList')->with('company',$com);
     }
 
