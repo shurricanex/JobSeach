@@ -29,8 +29,14 @@ class FrontController extends Controller
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
         return view('page.JobList')->with('posts',$post);
     }
+    public function search2(Request $request){
+        $search = $request->get('search');
+        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+        return view('page.JobCategories')->with('posts',$post);
+    }
     public function showCategory (){
-        return view('page.JobCategories');
+        $post= Post::orderBy('created_at', 'desc')->paginate(10);
+        return view('page.JobCategories')->with('posts',$post);
     }
 
     public function showCompany (){
@@ -42,5 +48,8 @@ class FrontController extends Controller
     }
     public function showRegistration(){
         return view('auth.register');
+    }
+    public function showCompanyDashboard(){
+        return view('app.companyDashboard');
     }
 }

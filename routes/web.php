@@ -23,10 +23,13 @@ Route::get('/', 'FrontController@showhome');
 
 Route::get('/search', 'PostController@search');
 Route::get('/search1', 'FrontController@search1');
+Route::get('/search2', 'FrontController@search2');
+
 Route::get('/category', 'FrontController@showCategory');
 Route::get('/company', 'FrontController@showCompany');
 Route::get('/location', 'FrontController@showLocation');
 Route::get('/register', 'FrontController@showRegistration');
+//Route::get('/company', 'FrontController@showCompanyDashboard');
 Route::resource('posts', 'PostController');
 
 Auth::routes();
