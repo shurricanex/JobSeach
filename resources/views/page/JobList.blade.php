@@ -56,11 +56,11 @@
 			   @if(count($posts)>0)
 				   @foreach ($posts as $post)
 					<div class="col-xl-6 float-left mt-4">
-						<div class="col-xl-12 list_box">
+						<!-- <div class="col-xl-12 list_box">
 							<div class="col-xl-12 ">
-								   <!-- <a href="/posts/{{$post->PID}}"> {{$post->position}}</a> -->
+								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
 								   <p class="h3">{{$post->position}}</p>
-								   <p>write on {{$post->created_at}}</p>
+								   <p>write on {{$post->created_at}}</p> -->
 
 
 						<div class="col-xl-12 list_box border border-warning">
@@ -81,7 +81,7 @@
 	</a>
 
 	<!-- popup style -->
-	@foreach($posts as $showPost)
+	<!-- @foreach($posts as $showPost)
 		<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -117,7 +117,7 @@
 				</div>
 			</div>
 		</div>
-		@endforeach
+		@endforeach -->
 
 
 	</a>
