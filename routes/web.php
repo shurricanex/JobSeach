@@ -14,18 +14,26 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::group(['middleware'=>'auth'], function(){
+
+    Route::get('/joblist', 'FrontController@showJoblist');
+});
 Route::get('/', 'FrontController@showhome');
-Route::get('/joblist', 'FrontController@showJoblist');
+
 Route::get('/search', 'PostController@search');
+Route::get('/search1', 'FrontController@search1');
+Route::get('/search2', 'FrontController@search2');
+
 Route::get('/category', 'FrontController@showCategory');
 Route::get('/company', 'FrontController@showCompany');
 Route::get('/location', 'FrontController@showLocation');
 Route::get('/register', 'FrontController@showRegistration');
+//Route::get('/company', 'FrontController@showCompanyDashboard');
 Route::resource('posts', 'PostController');
 
 Auth::routes();
 
-Route::get('/Home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

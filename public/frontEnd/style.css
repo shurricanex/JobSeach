@@ -1,5 +1,72 @@
 @charset "utf-8";
 /* CSS Document */
+
+/*.containerpic {*/
+/*    position: relative;*/
+/*    margin-top: 50px;*/
+/*    width: 500px;*/
+/*    height: 300px;*/
+/*}*/
+
+/*.imgOverlay {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: rgba(0, 0, 0, 0);*/
+/*    transition: background 0.5s ease;*/
+/*}*/
+
+/*.containerpic:hover .imgOverlay {*/
+/*    display: block;*/
+/*    background: rgba(0, 0, 0, .3);*/
+/*}*/
+
+/*img {*/
+/*    position: absolute;*/
+/*    width: 500px;*/
+/*    height: 300px;*/
+/*    left: 0;*/
+/*}*/
+
+
+
+/*!* .container:hover .title {*/
+/*  top: 90px;*/
+/*} *!*/
+
+/*.uploadButton{*/
+/*    position: absolute;*/
+/*    width: 500px;*/
+/*    left:0;*/
+/*    top: 180px;*/
+/*    text-align: center;*/
+/*    opacity: 0;*/
+/*    transition: opacity .35s ease;*/
+/*}*/
+
+/*.uploadButton#upload {*/
+/*    width: 200px;*/
+/*    padding: 12px 48px;*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*    border: solid 2px white;*/
+/*    z-index: 1;*/
+/*    */
+/*}*/
+
+/*.containerpic:hover .uploadButton {*/
+/*    opacity: 1;*/
+/*}*/
+
+.list_box{
+	height: 90px;
+	background-color: white;
+	padding: 10px 0px;
+	
+}
+
 .myHover:hover{
     background-image: linear-gradient(45deg, rgb(3, 107, 34) 20%, #0ab1f3);;
 }
@@ -49,9 +116,9 @@
 	font-family: 'Open Sans', sans-serif;
 
 }
-a:hover{
-   text-decoration: none;	
-}
+/*a:hover{*/
+/*   text-decoration: none;	*/
+/*}*/
 .test{
 	width: 100%;
 	height: 100px;
@@ -88,7 +155,7 @@ body
 {
 	float: left;
 }
-.nav_list ul li a
+.nav_list  a
 {
 	display: block;
 	text-decoration: none;
@@ -96,9 +163,19 @@ body
 	color: white;
 	padding: 20px;
 }
-.nav_list ul li a:hover{
+#createPost{
+    color:gold;
+}
+#createPost:hover{
+    color:yellow;
+}
+.nav_list ul li  a:active{
+    color:gold;
+}
+.nav_list ul li  a:hover{
 	color: yellow;
 }
+
 
 /*new nav bar for responsive*/
 .new_nav
