@@ -1,4 +1,31 @@
 @charset "utf-8";
+
+.container table{
+	background-color: black;
+	width: 100%;
+}
+.btn_cata tr td{
+	width: 50%;
+	height: 60px;
+	
+} 
+
+.btn_cata tr td input{
+	text-align: left;
+	width: 100%;
+	height: 60px;
+	border: none;
+	border-left:1px solid wheat;
+	border-bottom:1px solid gray;
+	padding: 20px;
+	background: white;
+	font-size: 20px;
+	
+}
+.btn_cata tr td input:hover{
+	cursor: pointer;
+	background-color: gray;
+}
 /* CSS Document */
 
 /*.containerpic {*/
@@ -61,7 +88,7 @@
 /*}*/
 
 .list_box{
-	height: 90px;
+	overflow: hidden;
 	background-color: white;
 	padding: 10px 0px;
 	
@@ -116,6 +143,13 @@
 	font-family: 'Open Sans', sans-serif;
 
 }
+
+.btn-light {
+    color: #212529;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
 /*a:hover{*/
 /*   text-decoration: none;	*/
 /*}*/
@@ -124,7 +158,6 @@
 	height: 100px;
 	background-color: black;
 }
-
 body
 {
 	
@@ -133,7 +166,6 @@ body
 .wall
 {
 
-	/* background-color: green; */
 	background-image: linear-gradient(to right, rgb(3, 107, 34) 20%, #0ab1f3);
 }
 .div1

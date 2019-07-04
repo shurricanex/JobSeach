@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-use App\Companys;
+
 use DB;
 
 class PostController extends Controller
@@ -50,9 +50,7 @@ class PostController extends Controller
             'Job_type'  => 'required',
             'Description'  => 'required',
             'contact'  => 'required',
-            'location'=>'required',
-//            'user_id'=>'required'
-
+            'location'=>'required'
         ]);
 
         $newPost=new Post;
@@ -76,7 +74,6 @@ class PostController extends Controller
     public function show($PID)
     {
         $showPost=Post::find($PID);
-        //$company=com::all();
         return view('Post.ShowPost')->with('showPost', $showPost);
     }
 
@@ -138,4 +135,15 @@ class PostController extends Controller
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
         return view('page.home')->with('posts',$post);
     }
+    public function search2(Request $request){
+        $search = $request->get('search');
+        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+        return view('page.JobCategories')->with('posts',$post);
+    }
+    public function search3(Request $request){
+        $search = $request->get('search');
+        $post = DB::table('posts')->where('location', 'like','%'.$search.'%')->paginate(5);
+        return view('page.JobLocation')->with('posts',$post);
+    }
+
 }
