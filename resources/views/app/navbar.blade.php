@@ -7,7 +7,7 @@
                     <div class="col-11 nav_list" >
                         <ul style="margin-bottom:0">
                             <li>
-                                <a href="/joblist" >Job List</a>
+                                <a href="/joblist"  >Job List</a>
                             </li>
                             <li>
                                 <a href="/category">Job Category</a>
@@ -17,6 +17,13 @@
                             </li>
                             <li>
                                 <a href="/location">Job Location</a>
+                            </li>
+                            <li >
+
+
+                                        <a href="/posts/create" id="createPost"> Create </a>
+
+
                             </li>
                          </ul>
                         <ul class="  " style="float: right;">
@@ -54,3 +61,37 @@
 
                 </div>
             </div>
+          <div class="container-fluid new_nav">
+              <i class="fa fa-bars text-light float-left" id="bar"></i>
+              <!-- <a class="btn btn-success float-left ml-3 text-light" href="signin.html">Sign In</a> -->
+              <div class="img">
+                  <a href="/" ><img src="img/IP-logo@3x.png"></a>
+              </div>
+              <div class="sub_nav">
+                  <ul>
+                      <li>
+                          <a href="/joblist" >Job List</a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li>
+                          <a href="/category">Job Category</a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li>
+                          <a href="/company">Company List</a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li>
+                          <a href="/location">Job Location</a>
+                      </li>
+                  </ul>
+              </div>
+
+          </div>
+
+
+
+          <!-- end nav -->
