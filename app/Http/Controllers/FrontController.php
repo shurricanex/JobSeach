@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
+use App\company;
 use DB;
 
 class FrontController extends Controller
@@ -40,7 +41,8 @@ class FrontController extends Controller
     }
 
     public function showCompany (){
-        return view('page.companyList');
+        $com=company::all();
+        return view('page.companyList')->with('company',$com);
     }
 
     public function showLocation (){

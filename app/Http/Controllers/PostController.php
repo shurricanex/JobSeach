@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-use App\Companys;
+
 use DB;
 
 class PostController extends Controller
@@ -127,4 +127,6 @@ class PostController extends Controller
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
         return view('page.home')->with('posts',$post);
     }
+
+
 }

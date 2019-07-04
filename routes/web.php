@@ -31,6 +31,8 @@ Route::get('/location', 'FrontController@showLocation');
 Route::get('/register', 'FrontController@showRegistration');
 //Route::get('/company', 'FrontController@showCompanyDashboard');
 
+Route::resource('CompanyPost', 'ComController');
+
 
 Auth::routes();
 
