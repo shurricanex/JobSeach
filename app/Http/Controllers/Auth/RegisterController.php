@@ -71,7 +71,7 @@ class RegisterController extends Controller
         ]);
         $user
             ->roles()
-            ->attach(Role::where('name','applicant')->first());
+            ->attach(Role::where('name','company')->first());
         return $user;
     }
     protected function createCompany(array $data)
