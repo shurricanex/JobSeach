@@ -11,7 +11,9 @@ class Post extends Model
     public $primaryKey='PID';
 
     public $timestamps=true;
-
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }
 
 

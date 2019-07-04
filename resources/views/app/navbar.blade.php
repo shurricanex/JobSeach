@@ -4,7 +4,7 @@
                     <div class=" col-1 div1">
                         <a href="/" ><img src="{{asset('frontEnd')}}/img/IP-logo@3x.png"></a>
                     </div>
-                    <div class="col-11 nav_list" >
+                    <ul class="col-11 nav_list" >
                         <ul style="margin-bottom:0">
                             <li>
                                 <a href="/joblist"  >Job List</a>
@@ -43,17 +43,18 @@
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
         
-                                        <div class="dropdown-menu dropdown-menu-right"  style="background-image: linear-gradient(to right, rgb(3, 107, 34) 20%, #0ab1f3); height:4em;width:1em; text-align:center;padding: 0px;" labelledby="navbarDropdown">
-                                            <a class=""  href="{{ route('logout') }}"
+                                        <ul class="dropdown-menu dropdown-menu-right"  style="background-image: linear-gradient(to right, rgb(3, 107, 34) 20%, #0ab1f3); height:4em;width:1em; padding: 0px;" labelledby="navbarDropdown">
+                                            <li><a href="/companyDashboard">My Company</a></li>
+                                         <li>  <a class=""  href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
                                             </a>
-        
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                         </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf
                                             </form>
-                                        </div>
+                                        </ul>
                                     </li>
                                 @endguest
                             </ul>

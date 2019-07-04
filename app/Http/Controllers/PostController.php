@@ -14,6 +14,11 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth',['except'=>['index','show']]);
+    }
+
     public function index()
     {
     //    $post= Post::all();
@@ -45,7 +50,8 @@ class PostController extends Controller
             'Job_type'  => 'required',
             'Description'  => 'required',
             'contact'  => 'required',
-            'location'=>'required'
+            'location'=>'required',
+//            'user_id'=>'required'
 
         ]);
 
@@ -55,6 +61,8 @@ class PostController extends Controller
         $newPost->contact_num=$request->input('contact');
         $newPost->location=$request->input('location');
         $newPost->description_job=$request->input('Description');
+        $newPost->user_id = auth()->user()->id;
+
         $newPost->save();
         return redirect('/joblist')->with('Success', 'New Post created');
     }
@@ -80,8 +88,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $editPost=Post::find($id);
-        return view('Post.EditPost')->with('editPost', $editPost);
+        $editPost = Post::find($id);
+        if (auth()->user()->id !== $editPost->user_id) {
+            return view('Post.EditPost')->with('editPost', $editPost);
+        }
     }
 
     /**
