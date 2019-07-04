@@ -26,55 +26,29 @@
 
     </div>
   <div>
-      <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
-          <div class="container mt-3">
-              <div class="row">
-                  {{--                        fetch data --}}
-                  @if(count($posts)>0)
-                      @foreach ($posts as $post)
-                          <div class="col-xl-6 float-left mt-4">
-                              <div class="col-xl-12 list_box border border-warning">
-                                  <div class="col-xl-12 ">
-                                      <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
-                                      <p>write on {{$post->created_at}}</p>
-                                  </div>
-                              </div>
-                          </div>
-                      @endforeach
-                  @else
-                      <p> Job not found</p>
-                  @endif
+  <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
+		<div class="container mt-3">
+			<div class="row">
+			{{--fetch data --}}
+			   @if(count($posts)>0)
+				   @foreach ($posts as $post)
+					<div class="col-xl-6 float-left mt-4">
+						<div class="col-xl-12 list_box border border-warning">
+							<div class="col-xl-12 ">
+                                   <a href="/posts/{{$post->PID}}" class="h2 text-primary"> {{$post->position}}</a><br>
+                                   <p> Type of job : {{$post->Job_type}} <br>
+                                          Location : {{$post->location}}</p>
+							</div>
+						</div>
+					</div>
+				   @endforeach
+			   @else
+				   <p> Job not found</p>
+			   @endif
+			</div>
+		</div>
+	</a>
 
-
-              </div>
-          </div>
-
-      </a>
-      <!--		end of my design-->
-  <!--
-			   <div class="">
-				   <div class="row">
-					   <div class="col-9">
-	{{--                        fetch data --}}
-  @if(count($posts)>0)
-      @foreach ($posts as $post)
-          <div class="list_box">
-              <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
-									   <p>write on {{$post->created_at}}</p>
-								   </div>
-							   @endforeach
-  @else
-      <p> Job not found</p>
-@endif
-
-      </div>
-
-  </div>
-</div>
--->
-      <!--			</div>-->
-      <!--    </a>-->
-      <!--	</div>-->
   </div>
         </div>
 
