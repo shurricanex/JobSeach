@@ -15,13 +15,17 @@
 	width: 100%;
 	height: 60px;
 	border: none;
-	border-left:2px solid gray;
+	border-left:1px solid wheat;
+	border-bottom:1px solid gray;
 	padding: 20px;
 	background: white;
 	font-size: 20px;
 	
 }
-
+.btn_cata tr td input:hover{
+	cursor: pointer;
+	background-color: gray;
+}
 /* CSS Document */
 
 /*.containerpic {*/
