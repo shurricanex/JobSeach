@@ -3,9 +3,9 @@
 @section('content')
 {{-- @extends('app.navbar') --}}
 
-<div class="container job_ca">
+<div class="container bg-light p4 mt-5">
 <form action="/search3" method="get">
-    <table class="table table-hover">
+    <table class="btn_cata">
         <tr>
             <td><a class="h1 text-success">Job Location</a></td>
             <td></td>

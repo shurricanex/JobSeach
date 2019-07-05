@@ -36,7 +36,14 @@
     <tr>
 
         <td>{{$post->position}}</td>
-        <td><a href="/posts/{{$post->PID}}/edit" class="btn btn-default"></a></td>
+        <td><a href="/posts/{{$post->PID}}/edit" class="btn btn-default">Edit</a></td>
+{{--        <a href="/posts/{{$showPost->PID}}/edit" class="btn btn-default bg-secondary">Edit</a>--}}
+
+        {{--  delete btn  --}}
+{{--        {!! Form::open(['action'=> ['PostController@destroy', $showPost->PID], 'method'=>'POST', 'class'=>'pull-right']) !!}--}}
+{{--        {!! Form::hidden('_method', 'DELETE') !!}--}}
+{{--        {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}--}}
+{{--        {!! Form::close() !!}--}}
         <td></td>
 
     </tr>

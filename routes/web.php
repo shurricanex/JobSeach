@@ -25,6 +25,7 @@ Route::get('/search', 'PostController@search');
 Route::get('/search1', 'FrontController@search1');
 Route::get('/search2', 'PostController@search2');
 Route::get('/search3', 'PostController@search3');
+Route::get('/search4', 'PostController@search4');
 
 Route::get('/category', 'FrontController@showCategory');
 Route::get('/company', 'FrontController@showCompany');

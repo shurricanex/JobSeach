@@ -130,11 +130,22 @@ class PostController extends Controller
         return redirect('/joblist')->with('Success', 'Post deleted');
     }
 
+//    public function search(Request $request){
+//        $search = $request->get('search');
+//        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+//        return view('page.home')->with('posts',$post);
+//    }
     public function search(Request $request){
         $search = $request->get('search');
-        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+        $jobType = $request->get('jobType');
+        $location = $request->get('location');
+        $post = DB::table('posts')
+        ->where('position', 'like','%'.$search.'%')
+            ->where('location', 'like','%'.$location.'%')
+            ->where('Job_type','like','%'.$jobType.'%')->paginate(15);
         return view('page.home')->with('posts',$post);
     }
+
     public function search2(Request $request){
         $search = $request->get('search');
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
@@ -145,5 +156,15 @@ class PostController extends Controller
         $post = DB::table('posts')->where('location', 'like','%'.$search.'%')->paginate(5);
         return view('page.JobLocation')->with('posts',$post);
     }
+    public function search4(Request $request){
+        $search = $request->get('popular');
+        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+        return view('page.home')->with('posts',$post);
+    }
+//    public function jobType(Request $request){
+//        $search = $request->get('search');
+//        $post = DB::table('posts')->where('jobType', 'like','%'.$search.'%')->paginate(5);
+//        return view('page.home')->with('posts',$post);
+//    }
 
 }
