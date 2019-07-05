@@ -86,7 +86,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $editPost = Post::find($id);
-        if (auth()->user()->id !== $editPost->user_id) {
+        if (auth()->user()->id == $editPost->user_id) {
             return view('Post.EditPost')->with('editPost', $editPost);
         }
     }
@@ -129,12 +129,6 @@ class PostController extends Controller
         $deletePost->delete();
         return redirect('/joblist')->with('Success', 'Post deleted');
     }
-
-//    public function search(Request $request){
-//        $search = $request->get('search');
-//        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
-//        return view('page.home')->with('posts',$post);
-//    }
     public function search(Request $request){
         $search = $request->get('search');
         $jobType = $request->get('jobType');

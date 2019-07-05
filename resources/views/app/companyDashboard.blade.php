@@ -1,50 +1,27 @@
 @extends('app.head')
 @extends('app.navbar')
 @section('content')
-<div style="height: 100px"></div>
-<div class="container">
-    <div class="content">
-
-        <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
-{{--            <div class="containerpic">--}}
-            <label for="file">
-
-                <img id="pic" src="{{asset('img/AIALogo.JPG')}}" height="100px" width="100px" alt="pictoupload">
-
-            </label>
-            <input type="file" name="file" id="file" onchange="readURL(this);" style="display: none">
-{{--                <div class="imgOverlay"></div>--}}
-            <input type="submit" class="uploadButton" value="upload" id ="upload" name="submit">
-{{--    </div>--}}
-{{--            <input type="hidden" value="{{ csrf_token() }}" name="_token">--}}
-        </form>
-
-    </div>
-{{--    <img src="{{asset('img/AIALogo.JPG')}}" height="100px" width="100px" >--}}
-</div>
-<div class="panel panel-default">
+<br>
+<div class="panel panel-default container">
 <a href="/post/create">Post Job</a>
 @if(count($posts)>0)
 <table class="table table-striped">
 
     <tr>
-        <th>Job Title</th>
-        <th></th>
-        <th></th>
+        <th class="p-3 m-2 bg-success text-white h5"> Job Tittle</th>
+        <th class="p-3 m-2 bg-success text-white h5"></th>
+        <th class="p-3 m-2 bg-success text-white h5"></th>
     </tr>
     @foreach($posts as $post )
     <tr>
-
-        <td>{{$post->position}}</td>
-        <td><a href="/posts/{{$post->PID}}/edit" class="btn btn-default">Edit</a></td>
-{{--        <a href="/posts/{{$showPost->PID}}/edit" class="btn btn-default bg-secondary">Edit</a>--}}
-
-        {{--  delete btn  --}}
-{{--        {!! Form::open(['action'=> ['PostController@destroy', $showPost->PID], 'method'=>'POST', 'class'=>'pull-right']) !!}--}}
-{{--        {!! Form::hidden('_method', 'DELETE') !!}--}}
-{{--        {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}--}}
-{{--        {!! Form::close() !!}--}}
-        <td></td>
+        <td> <a href="#"><br> {{$post->position}}</a> </td>
+        <td><a href="/posts/{{$post->PID}}/edit" class="btn btn-default" style="margin-left: 90%">Edit</a></td>
+        <td>
+                {!! Form::open(['action'=> ['PostController@destroy', $post->PID], 'method'=>'POST', 'class'=>'pull-right']) !!}
+                {!! Form::hidden('_method', 'DELETE') !!}
+                {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
+                {!! Form::close() !!}
+        </td>
 
     </tr>
     @endforeach
