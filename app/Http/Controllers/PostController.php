@@ -147,12 +147,12 @@ class PostController extends Controller
     }
     public function search3(Request $request){
         $search = $request->get('search');
-        $post = DB::table('posts')->where('location', 'like','%'.$search.'%')->paginate(5);
+        $post = DB::table('posts')->where('location', 'like','%'.$search.'%')->paginate(10);
         return view('page.JobLocation')->with('posts',$post);
     }
     public function search4(Request $request){
         $search = $request->get('popular');
-        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+        $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(10);
         return view('page.home')->with('posts',$post);
     }
 //    public function jobType(Request $request){
