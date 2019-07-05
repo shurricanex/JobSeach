@@ -28,7 +28,7 @@
 					<div class="col-xl-6 float-left mt-4">
 						<!-- <div class="col-xl-12 list_box">
 							<div class="col-xl-12 ">
-								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
+								   <a href="/posts/[{{$post->PID}}, "HELLO" "> {{$post->position}}</a>
 								   <p class="h3">{{$post->position}}</p>
 								   <p>write on {{$post->created_at}}</p> -->
 						<div class="col-xl-12 list_box border border-warning">

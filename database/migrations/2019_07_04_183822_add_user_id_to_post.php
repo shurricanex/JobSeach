@@ -26,7 +26,7 @@ class AddUserIdToPost extends Migration
     public function down()
     {
         Schema::table('post', function (Blueprint $table) {
-            //
+            $table->dropForeign('user_id');
         });
     }
 }

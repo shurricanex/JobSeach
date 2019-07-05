@@ -18,12 +18,12 @@
             <div class="mx-2"><i class="fas fa-dollar-sign"></i> Salary: N/A</div>
             <div class="mx-2">
             </div>
-         
+
         @if(!Auth::guest())
             @if(Auth::user()->id == $showPost->user_id)
             <div class="text-success h5 mx-2">Contact Information</div>
             <div class="mx-2  text-justify">{{$showPost->contact_num}} <hr></div>
-
+            
             {{--  Edit btn  --}}
             <a href="/posts/{{$showPost->PID}}/edit" class="btn btn-default bg-secondary">Edit</a>
 
