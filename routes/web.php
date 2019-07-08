@@ -17,7 +17,7 @@
 
 Route::group(['middleware'=>'auth'], function(){
 
-
+    Route::get('/posts/create', 'PostController@create');
 });
 Route::get('/', 'FrontController@showhome');
 Route::get('/joblist', 'FrontController@showJoblist');

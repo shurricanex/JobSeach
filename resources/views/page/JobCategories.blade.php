@@ -10,12 +10,12 @@
                  <td></td>
             </tr>
             <tr>
-                <td ><input  type="submit" name="search" id="" value="account"> </td> 
-                <td><input  type="submit" name="search" id="" value="engineer"></td>
+                <td ><input class="btn btn-light" type="submit" name="search" id="" value="account"> </td>
+                <td><input  class="btn btn-light" type="submit" name="search" id="" value="engineer"></td>
             </tr>
             <tr>
-                <td> <input  type="submit" name="search" id="" value="teacher"></td>
-                <td> <input  type="submit" name="search" id="" value="project manager">
+                <td> <input class="btn btn-light" type="submit" name="search" id="" value="teacher"></td>
+                <td> <input class="btn btn-light" type="submit" name="search" id="" value="project manager">
                    
                
             </tr> 

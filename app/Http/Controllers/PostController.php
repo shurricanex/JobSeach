@@ -14,10 +14,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth',['except'=>['index','show']]);
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('auth',['except'=>['index','show']]);
+//    }
 
     public function index()
     {
@@ -32,7 +32,7 @@ class PostController extends Controller
      */
     public function create( Request $request)
     {
-        $request->user()->authorizeRoles('company');
+//        $request->user()->authorizeRoles('company');
         return view('post.createPost');
     }
 
@@ -114,7 +114,7 @@ class PostController extends Controller
         $newPost->location=$request->input('location');
         $newPost->description_job=$request->input('Description');
         $newPost->save();
-        return redirect('/joblist')->with('Success', 'New Post created');
+        return redirect('/companyDashboard')->with('Success', 'New Post created');
     }
 
     /**
@@ -127,7 +127,7 @@ class PostController extends Controller
     {
         $deletePost=Post::find($id);
         $deletePost->delete();
-        return redirect('/joblist')->with('Success', 'Post deleted');
+        return redirect('/companyDashboard')->with('Success', 'Post deleted');
     }
     public function search(Request $request){
         $search = $request->get('search');
@@ -139,7 +139,6 @@ class PostController extends Controller
             ->where('Job_type','like','%'.$jobType.'%')->paginate(15);
         return view('page.home')->with('posts',$post);
     }
-
     public function search2(Request $request){
         $search = $request->get('search');
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);

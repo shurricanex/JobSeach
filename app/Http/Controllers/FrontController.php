@@ -28,6 +28,7 @@ class FrontController extends Controller
     public function search1(Request $request){
         $search = $request->get('search');
         $post = DB::table('posts')->where('position', 'like','%'.$search.'%')->paginate(5);
+
         return view('page.JobList')->with('posts',$post);
     }
 

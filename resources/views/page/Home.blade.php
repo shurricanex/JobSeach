@@ -16,7 +16,7 @@
                                <div class="row" >
 
                                               <div class="col-xl-3 col-md-6 col-12 mb-3 mr-0">
-                                                  <form action="/search" method="get">
+                                                  <form action="/search" method="get" id="mySearchForm">
                                                    <input class="form-control iphone_input shadow" type="search " placeholder="Input the major name" aria-label="Search" name="search" >
                                                </div>
                                                      <div class="col-xl-3 col-md-6 col-12 mb-3">
@@ -55,7 +55,7 @@
                                                                     </select></div>
 
                                                                   <div class="col-xl-2 col-md-6 col-12   ">
-                                                                          <button class=" btn btn-success btn-block iphone_input2 shadow" type="submit">Search</button></div>
+                                                                          <button class=" btn btn-success btn-block iphone_input2 shadow"  id="mySearch" name="mySearch" type="submit">Search</button></div>
                                                </form>
                                </div>
 
@@ -101,7 +101,8 @@
     </form>
 </div></div></div>
 {{--section for job data--}}
-<div>
+<div class="container" id="mypost"><h2>Job:</h2></div>
+<div >
 {{--    display data--}}
 	<!--	my design you can add more the laravel code because i don't know some code will do -->
 	 <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
@@ -113,7 +114,7 @@
 					<div class="col-xl-6 float-left mt-4">
 						<div class="col-xl-12 list_box">
 							<div class="col-xl-2 float-left">
-                        		<img src="../../../public/img/AIALogo.JPG">
+{{--                        		<img src="../../../public/img/AIALogo.JPG">--}}
                    			 </div>
 							<div class="col-xl-10 float-left">
 								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
@@ -289,7 +290,23 @@ THE GREAT DUKE HOTEL, 2nd Floor Regency Complex C, Unit No C2/6, Preah Monivong 
 
 </div>
 </footer>
-
+{{--<script>--}}
+{{--    $(document).ready(function () {--}}
+{{--        // Handler for .ready() called.--}}
+{{--        $('html, body').animate({--}}
+{{--            scrollTop: $('#mypost').offset().top--}}
+{{--        }, 'slow');--}}
+{{--    });--}}
+{{--</script>--}}
+<script>
+   // $('#mySearch').click(
+       $(document).ready(function () {
+        // Handler for .ready() called.
+       if(mySearch==true) {
+           $('html, body').animate({
+               scrollTop: $('#mypost').offset().top
+           }, 'slow');
+       } });
 </script>
 <div id="hello"></div>
  <script src="filejs/index.js"></script>
