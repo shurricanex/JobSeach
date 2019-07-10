@@ -13,13 +13,13 @@ General user : no need to log in but can see all the company posts.
  open your IDE terminal and type command : 
  phyton
       step 1 :
-       >git clown and this project @gitlink
-       >composer install
+       $git clown and this project @gitlink
+       $composer install
       step 2:
        - configure the env file if doesn't exist create new one 
        - configure the database 
-       > php artisan key:generate
-       > php artisan migrate
+       $php artisan key:generate
+       $php artisan migrate
        
 ```
 
