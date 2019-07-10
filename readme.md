@@ -3,7 +3,7 @@
  Searching job bases on category, location and company.
  
 # Current Functionalilty 
-bash```
+```bash
 Admin : can create, update, delete and their own post.
 General user : no need to log in but can see all the company posts.
 ```
