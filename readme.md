@@ -1,4 +1,4 @@
-# Job Search :search: :computer:
+# Job Search :mag: :computer: :briefcase:
  this web application is built with PHP and its Framework Laravel.
  Searching job bases on category, location and company.
  
