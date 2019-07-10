@@ -8,7 +8,7 @@ Admin : can create, update, delete and their own post.
 General user : no need to log in but can see all the company posts.
 ```
 # Screenshot
-![alt text](https://github.com/shurricanex/JobSeach/tree/master/public/img/Screen Shot 2019-07-10 at 3.28.36 PM.png)
+![alt text](https://github.com/shurricanex/JobSeach/tree/master/public/img/Screen\Shot\2019-07-10\at\3.28.36\PM.png)
 ### How to set up this project?
 ```bash
 -Download or clown the project 
