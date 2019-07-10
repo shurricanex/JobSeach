@@ -24,7 +24,7 @@ General user : no need to log in but can see all the company posts.
        $php artisan key:generate
        $php artisan migrate
        $php artisan serve 
-       There you go!!! :sunglasses:
+       There you go!!! ``` :sunglasses:
        
-```
+
 
