@@ -299,14 +299,15 @@ THE GREAT DUKE HOTEL, 2nd Floor Regency Complex C, Unit No C2/6, Preah Monivong 
 {{--    });--}}
 {{--</script>--}}
 <script>
-   // $('#mySearch').click(
+   $('#mySearch').click(
        $(document).ready(function () {
         // Handler for .ready() called.
-       if(mySearch==true) {
+       // if(mySearch==true) {
            $('html, body').animate({
                scrollTop: $('#mypost').offset().top
            }, 'slow');
-       } });
+       // }
+}));
 </script>
 <div id="hello"></div>
  <script src="filejs/index.js"></script>
