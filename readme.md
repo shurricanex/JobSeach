@@ -26,7 +26,7 @@ General user : no need to log in but can see all the company posts.
        $php artisan serve 
        There you go!!!  
 ```       
-       :sunglasses:
+       
        
 
 
