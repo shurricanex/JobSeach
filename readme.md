@@ -13,17 +13,18 @@ General user : no need to log in but can see all the company posts.
 ### How to set up this project?
 
 ```bash
--Download or clown the project 
- open your IDE terminal and type command : 
+-Download or clown the project the follow below step in terminal: 
  
       step 1 :
-       $git clown and this project @gitlink
+       $git clone https://github.com/shurricanex/JobSeach.git
        $composer install
        
       step 2:
-       - configure dabase in .env file
+       - configure database in .env file (port, name, password) in the project
        $php artisan key:generate
        $php artisan migrate
+       $php artisan serve 
+       There you go!!! :sunglasses:
        
 ```
 
