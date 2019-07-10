@@ -4,7 +4,7 @@
  
 # Current Functionalilty 
 ```bash
-Admin : can create, update, delete and their own post.
+Company : can create, update, delete and their own post.
 General user : no need to log in but can see all the company posts.
 ```
 # Screenshot
