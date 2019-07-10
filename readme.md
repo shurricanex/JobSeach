@@ -6,9 +6,9 @@
 bash```
 Admin : can create, update, delete and their own post.
 General user : no need to log in but can see all the company posts.
-```python
 
-# How to set up this project?
+### How to set up this project?
+```php
 -Download or clown the project 
  open your IDE terminal and type command : 
  phyton
