@@ -3,12 +3,15 @@
  Searching job bases on category, location and company.
  
 # Current Functionalilty 
+bash```
 Admin : can create, update, delete and their own post.
 General user : no need to log in but can see all the company posts.
+```python
 
 # How to set up this project?
 -Download or clown the project 
  open your IDE terminal and type command : 
+ phyton
       step 1 :
        >git clown and this project @gitlink
        >composer install
@@ -18,5 +21,5 @@ General user : no need to log in but can see all the company posts.
        > php artisan key:generate
        > php artisan migrate
        
-
+```
 
