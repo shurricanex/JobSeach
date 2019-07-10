@@ -17,8 +17,7 @@ General user : no need to log in but can see all the company posts.
        $composer install
        
       step 2:
-       - configure the env file if doesn't exist create new one 
-       - configure the database 
+       - configure dabase in .env file
        $php artisan key:generate
        $php artisan migrate
        
