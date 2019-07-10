@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserIdToPost extends Migration
+class AddImgToCom extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AddUserIdToPost extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->integer('user_id');
-        });
+
+            Schema::table('companies', function (Blueprint $table) {
+                $table->mediumText('image');
+            });
+
     }
 
     /**
@@ -25,8 +27,8 @@ class AddUserIdToPost extends Migration
      */
     public function down()
     {
-        Schema::table('post', function (Blueprint $table) {
-            $table->dropForeign('user_id');
+        Schema::table('companies', function (Blueprint $table) {
+            $table->dropColum('image');
         });
     }
 }

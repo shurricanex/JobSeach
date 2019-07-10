@@ -16,39 +16,46 @@
                                <div class="row" >
 
                                               <div class="col-xl-3 col-md-6 col-12 mb-3 mr-0">
-                                                  <form action="/search" method="get">
+                                                  <form action="/search" method="get" id="mySearchForm">
                                                    <input class="form-control iphone_input shadow" type="search " placeholder="Input the major name" aria-label="Search" name="search" >
                                                </div>
                                                      <div class="col-xl-3 col-md-6 col-12 mb-3">
-                                                           <select name="catagories" class="form-control iphone_input2 shadow" >
-                                                                  <option value="accounting">Accouting</option>
-                                                                         <option value="it">Information Technology</option>
-                                                                         <option value="it">Accountant</option>
-                                                                         <option value="it">Electrician</option>
-                                                                         <option value="it">Software Engineer</option>
-                                                                         <option value="it">Mobile Developer</option>
-                                                                         <option value="it">Web Developer</option>
-                                                                         <option value="it">Teacher</option>
-                                                                         <option value="it">Lawyer</option>
-                                                                         <option value="it">Cahier</option>
+{{--                                                           <select name="catagories" class="form-control iphone_input2 shadow" >--}}
+{{--                                                                  <option value="accounting">Accouting</option>--}}
+{{--                                                                         <option value="it">Information Technology</option>--}}
+{{--                                                                         <option value="it">Accountant</option>--}}
+{{--                                                                         <option value="it">Electrician</option>--}}
+{{--                                                                         <option value="it">Software Engineer</option>--}}
+{{--                                                                         <option value="it">Mobile Developer</option>--}}
+{{--                                                                         <option value="it">Web Developer</option>--}}
+{{--                                                                         <option value="it">Teacher</option>--}}
+{{--                                                                         <option value="it">Lawyer</option>--}}
+{{--                                                                         <option value="it">Cahier</option>--}}
 
-                                                             </select></div>
+{{--                                                             </select></div>--}}
+                                                               <select name="jobType" class="form-control iphone_input2 shadow" >
+                                                                   <option value="full time" name = "fulltime">Full Time</option>
+                                                                   <option value="part time" name = "parttime">Part Time</option>
+
+
+                                                               </select></div>
+
                                                              <div class="col-xl-3 col-md-6 col-12 mb-3 ">
                                                                   <select name="location" class="form-control iphone_input2 shadow">
-                                                                         <option value="accounting">Kampot</option>
-                                                                                 <option value="it">Phnom Penh</option>
-                                                                                 <option value="it">Pursat</option>
-                                                                                 <option value="it">Kandal</option>
-                                                                                 <option value="it">Poipet</option>
-                                                                                 <option value="it">Svay Rieng</option>
-                                                                                 <option value="it">Koh Kong</option>
-                                                                                 <option value="it">Battam Bang</option>
-                                                                                 <option value="it">Kompong Cham</option>
-                                                                                 <option value="it">Kompong Chhnang</option>
+                                                                                <option value="kampot" name="kampot">Kampot</option>
+                                                                                 <option value="phnom penh" name="phnompenh">Phnom Penh</option>
+                                                                                 <option value="pursat">Pursat</option>
+                                                                                 <option value="kandal" name="kandal">Kandal</option>
+                                                                                 <option value="poipet">Poipet</option>
+                                                                                 <option value="svay rieng">Svay Rieng</option>
+                                                                                 <option value="koh rong">Koh Kong</option>
+                                                                                 <option value="battam bang" name="battambang">Battam Bang</option>
+                                                                                 <option value="kompong cham" name="kampongcham">Kompong Cham</option>
+                                                                                 <option value="kompong chhnang">Kompong Chhnang</option>
                                                                     </select></div>
 
                                                                   <div class="col-xl-2 col-md-6 col-12   ">
-                                                                          <button class=" btn btn-success btn-block iphone_input2 shadow" type="submit">Search</button></div>
+                                                                          <button class=" btn btn-success btn-block iphone_input2 shadow"  id="mySearch" name="mySearch" type="submit">Search</button></div>
                                                </form>
                                </div>
 
@@ -70,30 +77,32 @@
 <div class="row">
 <div class=" mx-auto">
 <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
-
-    <a  class="btn myHover btn2" id="educat"><span><img src="img/engineer.png" class="img3" ></span><br><br> Engineering</a>
+<form action="/search4" method="get">
+    <button  class="myHover btn2" id="educat" type="submit" value="engineer" name="popular"><span><img src="img/engineer.png" class="img3" ></span><br><br> Engineering</button>
 
 </div>
 </div>
 <div class=" mx-auto">
 <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-                <a  class="btn myHover btn2" id="account"><span><img src="img/acc.jpg" class="img3" ></span><br><br> Accounting</a>
+                <button  class="btn myHover btn2" id="account" type="submit" value="account" name="popular"><span><img src="img/acc.jpg" class="img3" ></span><br><br> Accounting</button>
             </div>
             </div>
             <div class=" mx-auto">
             <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
-                <a href="#" class="btn myHover btn2"><span><img src="img/it.jpg" class="img3"></span><br><br> Information Technology</a>
+                <button href="#" class="btn myHover btn2" type="submit" value="it" name="popular"><span><img src="img/it.jpg" class="img3"></span><br><br> Information Technology</>
             </div>
             </div>
             <div class=" mx-auto">
             <div class="col-xl-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                <a href="#" class="btn myHover btn2"><span><img src="img/design.png" class="img3"></span><br><br> Designer</a>
-            </div>
+                <button href="#" class="btn myHover btn2" type="submit" value="design" name="popular"><span><img src="img/design.png" class="img3"></span><br><br> Designer</button>
             </div>
 
+            </div>
+    </form>
 </div></div></div>
 {{--section for job data--}}
-<div>
+<div class="container" id="mypost"><h2>Job:</h2></div>
+<div >
 {{--    display data--}}
 	<!--	my design you can add more the laravel code because i don't know some code will do -->
 	 <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
@@ -105,7 +114,7 @@
 					<div class="col-xl-6 float-left mt-4">
 						<div class="col-xl-12 list_box">
 							<div class="col-xl-2 float-left">
-                        		<img src="../../../public/img/AIALogo.JPG">
+{{--                        		<img src="../../../public/img/AIALogo.JPG">--}}
                    			 </div>
 							<div class="col-xl-10 float-left">
 								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
@@ -117,37 +126,35 @@
 			   @else
 				   <p> Job not found</p>
 			   @endif
-							
-					
+
+
 			</div>
 		</div>
 	</a>
 <!--		end of my design-->
-	
+
 <!--
-     <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
-         <div class="col-xl-6 col-md-6 col-12">
-             @if(count($posts)>0)
-                @foreach ($posts as $post)
-                    <div class="div2 p-2 mb-3 mx-auto">
-                        <div class="row">
-                            <div class="col-3 ">
-                                <img src="">
-                            </div>
-                            <div class="col-9">
-                                <div class="well">
-                                    <h3> <a href="/posts/{{$post->PID}}"> {{$post->position}}</a></h3>
-                                    <p>write on {{$post->created_at}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 @endforeach
-            @else
-                <p> Job not found</p>
-            @endif
-         </div>
-     </a>
+    <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" >
+		<div class="container mt-3">
+			<div class="row">
+			{{--fetch data --}}
+			   @if(count($posts)>0)
+				   @foreach ($posts as $post)
+					<div class="col-xl-6 float-left mt-4">
+						<div class="col-xl-12 list_box border border-warning">
+							<div class="col-xl-12 ">
+								   <a href="/posts/{{$post->PID}}"> {{$post->position}}</a>
+								   <p>write on {{$post->created_at}}</p>
+							</div>
+						</div>
+					</div>
+				   @endforeach
+			   @else
+				   <p> Job not found</p>
+			   @endif
+			</div>
+		</div>
+	</a>
 -->
 {{--    end display data--}}
 </div>
@@ -283,7 +290,24 @@ THE GREAT DUKE HOTEL, 2nd Floor Regency Complex C, Unit No C2/6, Preah Monivong 
 
 </div>
 </footer>
-
+{{--<script>--}}
+{{--    $(document).ready(function () {--}}
+{{--        // Handler for .ready() called.--}}
+{{--        $('html, body').animate({--}}
+{{--            scrollTop: $('#mypost').offset().top--}}
+{{--        }, 'slow');--}}
+{{--    });--}}
+{{--</script>--}}
+<script>
+   $('#mySearch').click(
+       $(document).ready(function () {
+        // Handler for .ready() called.
+       // if(mySearch==true) {
+           $('html, body').animate({
+               scrollTop: $('#mypost').offset().top
+           }, 'slow');
+       // }
+}));
 </script>
 <div id="hello"></div>
  <script src="filejs/index.js"></script>

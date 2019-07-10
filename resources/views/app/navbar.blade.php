@@ -18,6 +18,7 @@
                             <li>
                                 <a href="/location">Job Location</a>
                             </li>
+                            @if(!Auth::guest())
                             <li >
 
 
@@ -25,6 +26,7 @@
 
 
                             </li>
+                                @endif
                          </ul>
                         <ul class="  " style="float: right;">
                                 <!-- Authentication Links -->
@@ -43,9 +45,9 @@
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
         
-                                        <ul class="dropdown-menu dropdown-menu-right"  style="background-image: linear-gradient(to right, rgb(3, 107, 34) 20%, #0ab1f3); height:4em;width:1em; padding: 0px;" labelledby="navbarDropdown">
+                                        <ul class="dropdown-menu dropdown-menu-right"  style="background-image: linear-gradient(to right, rgb(3, 107, 34) 20%, #0ab1f3); height:150px;width:200px; padding: 0px;" labelledby="navbarDropdown">
                                             <li><a href="/companyDashboard">My Company</a></li>
-                                         <li>  <a class=""  href="{{ route('logout') }}"
+                                         <li style="text-align: center" >  <a  href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}

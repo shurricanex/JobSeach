@@ -2,7 +2,6 @@
 @section('content')
     <div style="margin-top: 100px" class="container">
         <div class="container">
-             <h3  class="btn btn-default  bg-light"> <a href="/joblist">Back </a></h3>
 
             <h1>Edit  a Post of job.</h1>
             {!! Form::open(['action'=>['PostController@update', $editPost->PID], 'Method'=>'POST']) !!}
