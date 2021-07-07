@@ -13,7 +13,7 @@ General user : no need to log in but can see all the company posts.
 ### How to set up this project?
 
 ```bash
--Download or clown the project the follow below step in terminal: 
+-Download or clone the project the follow below step in terminal: 
  
       step 1 :
        $git clone https://github.com/shurricanex/JobSeach.git
