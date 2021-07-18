@@ -5,7 +5,8 @@
 # Current Functionalilty 
 ```bash
 Company : can create, update, delete and their own post.
-General user : no need to log in but can see all the company posts.
+User : can view and save companies post with their login account 
+       or just view without login. 
 ```
 # Screenshot
 <img width="1280" alt="Screen Shot 2019-07-10 at 3 28 36 PM" src="https://user-images.githubusercontent.com/38878299/60954083-97a98780-a328-11e9-91d3-fafef738de43.png">
